@@ -103,7 +103,6 @@ Integrated contact form using FormSubmit that allows visitors to send messages d
 - GitHub
 
 ### Infrastructure as Code
-- Terraform
 - AWS CloudFormation
 
 ### Monitoring & Logging
