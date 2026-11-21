@@ -1,18 +1,10 @@
-<!-- ========================= index.html ========================= -->
-
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>Spandana Shetty | DevOps Engineer</title>
-
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
-
-    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -20,63 +12,47 @@
   </head>
 
   <body>
-    <!-- Background -->
     <div class="background"></div>
-
-    <!-- Overlay -->
     <div class="overlay"></div>
 
-    <!-- ================= NAVBAR ================= -->
-
+    <!-- NAVBAR -->
     <nav>
       <h1 class="logo">SPANDANA</h1>
-
       <ul>
         <li><a href="#home">Home</a></li>
-
         <li><a href="#skills">Skills</a></li>
-
         <li><a href="#experience">Experience</a></li>
-
         <li><a href="#education">Education</a></li>
-
         <li><a href="#certifications">Certifications</a></li>
-
         <li><a href="#projects">Projects</a></li>
-
         <li><a href="#hobbies">Hobbies</a></li>
-
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
 
-    <!-- ================= HERO ================= -->
-
+    <!-- HERO -->
     <section class="hero" id="home">
       <div class="hero-left">
         <h2>Hello, I'm</h2>
-
         <h1>Spandana Shetty</h1>
-
         <h3 class="typing-text"></h3>
-
         <p>
-          Qualified DevOps Engineer with experience in AWS cloud, Kubernetes,
-          Docker, CI/CD automation and AI-powered cloud solutions.
+          DevOps Engineer with <b>3+ years of experience</b> delivering cloud
+          infrastructure and CI/CD automation for <b>Barclays Bank</b> in the
+          banking domain. Skilled in <b>AWS, Jenkins, Groovy, Terraform,
+          Ansible, Docker and Kubernetes</b>, with hands-on experience in
+          infrastructure provisioning, application deployment, artifact
+          management and enterprise automation.
         </p>
-
         <div class="buttons">
-          <a href="https://github.com/spandana1401" target="_blank"> GitHub </a>
-
+          <a href="https://github.com/spandana1401" target="_blank">GitHub</a>
           <a
             href="https://linkedin.com/in/spandana-shetty-418884211"
             target="_blank"
+            >LinkedIn</a
           >
-            LinkedIn
-          </a>
         </div>
       </div>
-
       <div class="hero-right">
         <div class="profile-card">
           <img src="img2.jpeg" alt="Profile" />
@@ -84,366 +60,237 @@
       </div>
     </section>
 
-    <!-- ================= SKILLS ================= -->
-
+    <!-- SKILLS -->
     <section id="skills">
       <h2 class="section-title">Skills</h2>
-
       <div class="skills-grid">
+        <div class="card" data-skill="cicd">
+          <i class="fa-solid fa-code-branch"></i>
+          <h3>CI/CD & Build Automation</h3>
+        </div>
         <div class="card" data-skill="aws">
           <i class="fa-brands fa-aws"></i>
-
           <h3>AWS Cloud</h3>
         </div>
-
-        <div class="card" data-skill="docker">
+        <div class="card" data-skill="iac">
+          <i class="fa-solid fa-layer-group"></i>
+          <h3>IaC & Configuration Management</h3>
+        </div>
+        <div class="card" data-skill="containers">
           <i class="fa-brands fa-docker"></i>
-
-          <h3>Containerization</h3>
+          <h3>Containers & Artifacts</h3>
         </div>
-
-        <div class="card" data-skill="kubernetes">
-          <i class="fa-solid fa-server"></i>
-
-          <h3>CI/CD</h3>
+        <div class="card" data-skill="monitoring">
+          <i class="fa-solid fa-chart-line"></i>
+          <h3>Monitoring & Security</h3>
         </div>
-
-        <div class="card" data-skill="jenkins">
-          <i class="fa-solid fa-code"></i>
-
-          <h3>Monitoring & Tools</h3>
-        </div>
-
-        <div class="card" data-skill="linux">
+        <div class="card" data-skill="scripting">
           <i class="fa-brands fa-linux"></i>
-
-          <h3>Operating Systems</h3>
-        </div>
-
-        <div class="card" data-skill="ai">
-          <i class="fa-solid fa-robot"></i>
-
-          <h3>Scripting & Database</h3>
+          <h3>Scripting, OS & AI Automation</h3>
         </div>
       </div>
     </section>
-
-    <!-- ================= SKILL POPUP ================= -->
 
     <div class="card-popup" id="popup">
       <span class="close-btn">&times;</span>
-
       <h2 id="popup-title"></h2>
-
       <ul id="popup-content"></ul>
     </div>
 
-    <!-- ================= EXPERIENCE ================= -->
-
+    <!-- EXPERIENCE -->
     <section id="experience">
       <h2 class="section-title">Experience</h2>
-      <h2>Accenture - <span>(2024-Present)</span></h2>
+      <h2>
+        Accenture Solutions Pvt Ltd - Barclays Bank
+        <span>(Feb 2024 - Present)</span>
+      </h2>
       <br />
       <p>
-        <b>Project:</b> Enterprise Banking Application handling live transaction
-        data flow and automated reporting workflows. Managed cloud-native DevOps
-        operations, Kubernetes-based automation, CI/CD pipelines, infrastructure
-        provisioning, and AI-powered RPA integrations using AWS and Amazon
-        Bedrock services.
+        <b>Project:</b> Enterprise banking applications for Barclays Bank.
+        Delivering cloud infrastructure, Jenkins CI/CD pipelines, artifact
+        management, AWS provisioning and AI-powered automation using AWS and
+        Amazon Bedrock. Click a card to see key contributions.
       </p>
       <br />
       <div class="skills-grid">
-        <div class="card experience-card" data-exp="accenture">
+        <div class="card experience-card" data-exp="devops">
           <i class="fa-solid fa-cloud"></i>
-
-          <h3>Accenture</h3>
-
-          <p>Packaged App Development Analyst</p>
+          <h3>DevOps Engineer</h3>
+          <p>Aug 2025 - Present</p>
         </div>
-
-        <div class="card experience-card" data-exp="bedrock">
-          <i class="fa-solid fa-cloud"></i>
-
-          <h3>Accenture</h3>
-
-          <p>Packaged App Development Associate</p>
+        <div class="card experience-card" data-exp="associate">
+          <i class="fa-solid fa-robot"></i>
+          <h3>Packaged App Development Associate</h3>
+          <p>Feb 2024 - Aug 2025</p>
         </div>
       </div>
     </section>
 
-    <!-- ================= EXPERIENCE POPUP ================= -->
-
     <div class="card-popup" id="experience-popup">
       <span class="exp-close-btn">&times;</span>
-
       <h2 id="exp-title"></h2>
-
       <ul id="exp-content"></ul>
     </div>
 
-    <!-- ================= EDUCATION ================= -->
-
+    <!-- EDUCATION -->
     <section id="education">
       <h2 class="section-title">Education</h2>
-
       <div class="timeline-item">
-        <h3>Bachelor of Engineering in Computer Science</h3>
-
-        <h4>VTU, Karnataka</h4>
-
-        <p>2019 - 2023</p>
+        <h3>Bachelor of Engineering in Computer Science & Engineering</h3>
+        <h4>Mangalore Institute of Technology & Engineering</h4>
+        <p>2019 - 2023 &nbsp;|&nbsp; <b>CGPA: 8.35</b></p>
       </div>
       <br />
       <div class="timeline-item">
         <h3>Pre-University Education (PUC)</h3>
-
-        <h4>Vidyodaya Pre-University College, udupi</h4>
-
+        <h4>Vidyodaya Pre-University College, Udupi</h4>
         <p>2017 - 2019</p>
       </div>
     </section>
 
-    <!-- ================= CERTIFICATIONS ================= -->
-
+    <!-- CERTIFICATIONS -->
     <section id="certifications">
-      <h2 class="section-title">Certifications</h2>
-
+      <h2 class="section-title">Courses & Certifications</h2>
       <div class="project-container">
         <div class="project-card">
           <h3>AWS Certified Developer Associate</h3>
-
-          <p>AWS Cloud, CI/CD & DevOps</p>
-
-          <a
-            href="AWS Certified Developer - Associate certificate.pdf"
-            class="yellow-btn"
-          >
-            View Certificate
-          </a>
+          <p>February 14, 2026</p>
+          <a href="AWS Certified Developer - Associate certificate.pdf" class="yellow-btn">View Certificate</a>
         </div>
-
         <div class="project-card">
-          <h3>Databricks Certified Generative AI Engineer</h3>
-
-          <p>Generative AI & AI Integration</p>
-
-          <a href="Databricks certificate.png" class="yellow-btn">
-            View Certificate
-          </a>
+          <h3>Databricks Certified Generative AI Engineer Associate</h3>
+          <p>January 11, 2026</p>
+          <a href="Databricks certificate.png" class="yellow-btn">View Certificate</a>
+        </div>
+        <div class="project-card">
+          <h3>Linux Fundamentals</h3>
+          <p>Linux Foundation</p>
+        </div>
+        <div class="project-card">
+          <h3>Jenkins Certification</h3>
+          <p>CloudBees / Linux Foundation</p>
+        </div>
+        <div class="project-card">
+          <h3>Git and GitHub Certification</h3>
+          <p>GitHub</p>
         </div>
       </div>
     </section>
 
-    <!-- ================= PROJECTS ================= -->
-
+    <!-- PROJECTS -->
     <section id="projects">
       <h2 class="section-title">Projects</h2>
-
       <div class="project-container">
         <div class="project-card">
-          <h3>Amazon Bedrock Integration</h3>
-
-          <p>
-            Integrated Amazon Q and Bedrock with enterprise automation
-            solutions.
-          </p>
-
-          <a
-            href="https://github.com/spandana1401"
-            target="_blank"
-            class="yellow-btn"
-          >
-            GitHub
-          </a>
+          <h3>Amazon Q & Bedrock Agents Integration</h3>
+          <p>Intelligent automation for application error analysis and resolution recommendations. Built <b>Python Flask REST APIs</b> connecting <b>Blue Prism bots</b> to <b>Amazon Bedrock</b> with secure IAM-based access.</p>
         </div>
-
         <div class="project-card">
-          <h3>Kubernetes Automation</h3>
-
-          <p>
-            Built Kubernetes-based deployment workflows for enterprise
-            applications.
-          </p>
-
-          <a
-            href="https://github.com/spandana1401"
-            target="_blank"
-            class="yellow-btn"
-          >
-            GitHub
-          </a>
+          <h3>Jenkins EC2 Provisioning Platform</h3>
+          <p>Parameterized Jenkins jobs provisioning <b>10-30 EC2 instances</b> with AMI, storage and security group selection, integrated with <b>RDS, MSAD and Nexus</b> for database connectivity, domain joining and application installs.</p>
         </div>
-
         <div class="project-card">
-          <h3>College Project - Anxiety & Depression Detection</h3>
-
-          <p>
-            Deep learning based mental health prediction system using AI and
-            data analysis.
-          </p>
-
-          <a
-            href="https://github.com/spandana1401"
-            target="_blank"
-            class="yellow-btn"
-          >
-            GitHub
-          </a>
+          <h3>Terraform & Ansible Infrastructure Automation</h3>
+          <p>Automated AWS provisioning across dev, staging and production, cutting environment setup from <b>3+ hours to under 15 minutes (90%+ reduction)</b>.</p>
+        </div>
+        <div class="project-card">
+          <h3>Container Base Image Upgrade Automation</h3>
+          <p>Docker and ECR workflows for Alpine Linux, Splunk, Tanium and cronjob images with version selection, build, tagging and publishing, reducing manual effort by an estimated <b>50-70%</b>.</p>
+        </div>
+        <div class="project-card">
+          <h3>Nexus Artifact & Enterprise Software Pipelines</h3>
+          <p>Jenkins pipelines to package, version and publish artifacts to <b>Nexus</b>, and to deploy <b>Splunk Forwarder, Tanium, Blue Prism and UiPath</b> on standardized Windows AMIs.</p>
+        </div>
+        <div class="project-card">
+          <h3>AWS IAM Access Management with CloudFormation</h3>
+          <p>Custom IAM roles and permission policies as CloudFormation templates in <b>CodeCommit</b>, with secure access via <b>Session Manager</b> and license control via <b>License Manager</b>.</p>
         </div>
       </div>
     </section>
 
-    <!-- ================= HOBBIES ================= -->
-
+    <!-- HOBBIES -->
     <section id="hobbies">
       <h2 class="section-title">Hobbies</h2>
-
       <div class="hobby-container">
         <div class="hobby-card">
           <i class="fa-solid fa-plane"></i>
-
           <h3>Travelling</h3>
-
           <p>My wallet says no, but my heart books tickets.</p>
         </div>
-
         <div class="hobby-card">
           <i class="fa-solid fa-video"></i>
-
           <h3>Reel Making</h3>
-
           <p>Turning random moments into cinematic Instagram reels.</p>
-
           <a
             href="https://www.instagram.com/shettystories?igsh=MWE2dWI4NGowdzRuMw%3D%3D&utm_source=qr"
             target="_blank"
             class="yellow-btn"
+            >Instagram</a
           >
-            Instagram
-          </a>
         </div>
-
         <div class="hobby-card">
           <i class="fa-solid fa-clapperboard"></i>
-
           <h3>K-Drama Watching</h3>
-
           <p>Professionally crying over fictional characters since 2020.</p>
         </div>
       </div>
     </section>
 
-    <!-- ================= LANGUAGES ================= -->
-
+    <!-- LANGUAGES -->
     <section id="languages">
       <h2 class="section-title">Languages</h2>
-
       <div class="language-container">
-        <!-- English -->
         <div class="language-card">
-          <div class="lang-circle">
-            <i class="fa-solid fa-language"></i>
-          </div>
-
+          <div class="lang-circle"><i class="fa-solid fa-language"></i></div>
           <h3>English</h3>
-
-          <div class="lang-tags">
-            <span>Read</span>
-            <span>Write</span>
-            <span>Speak</span>
-          </div>
+          <div class="lang-tags"><span>Read</span><span>Write</span><span>Speak</span></div>
         </div>
-
-        <!-- Kannada -->
         <div class="language-card">
-          <div class="lang-circle">
-            <i class="fa-solid fa-earth-asia"></i>
-          </div>
-
+          <div class="lang-circle"><i class="fa-solid fa-earth-asia"></i></div>
           <h3>Kannada</h3>
-
-          <div class="lang-tags">
-            <span>Read</span>
-            <span>Write</span>
-            <span>Speak</span>
-          </div>
+          <div class="lang-tags"><span>Read</span><span>Write</span><span>Speak</span></div>
         </div>
-
-        <!-- Hindi -->
         <div class="language-card">
-          <div class="lang-circle">
-            <i class="fa-solid fa-comments"></i>
-          </div>
-
+          <div class="lang-circle"><i class="fa-solid fa-comments"></i></div>
           <h3>Hindi</h3>
-
           <p class="beginner">Beginner</p>
-
-          <div class="lang-tags">
-            <span>Read</span>
-            <span>Write</span>
-            <span>Speak</span>
-          </div>
+          <div class="lang-tags"><span>Read</span><span>Write</span><span>Speak</span></div>
         </div>
-
-        <!-- Swedish -->
         <div class="language-card">
-          <div class="lang-circle">
-            <i class="fa-solid fa-globe"></i>
-          </div>
-
+          <div class="lang-circle"><i class="fa-solid fa-globe"></i></div>
           <h3>Swedish</h3>
-
           <p class="beginner">Beginner</p>
-
-          <div class="lang-tags">
-            <span>Read</span>
-            <span>Write</span>
-            <span>Speak</span>
-          </div>
+          <div class="lang-tags"><span>Read</span><span>Write</span><span>Speak</span></div>
         </div>
       </div>
     </section>
 
-    <!-- ================= CONTACT ================= -->
-
+    <!-- CONTACT -->
     <section id="contact">
       <h2 class="section-title">Contact Me</h2>
-
       <div class="contact-form">
-        <form
-          action="https://formsubmit.co/spandanashetty2001@gmail.com"
-          method="POST"
-        >
+        <form id="contact-form" action="https://formsubmit.co/spandanashetty2001@gmail.com" method="POST">
           <input type="hidden" name="_captcha" value="false" />
-
           <input type="hidden" name="_template" value="table" />
-
+          <input type="hidden" name="_subject" value="New message from your portfolio" />
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
           <input type="text" name="name" placeholder="Your Name" required />
-
           <input type="email" name="email" placeholder="Your Email" required />
-
-          <textarea
-            name="message"
-            rows="6"
-            placeholder="Your Message"
-            required
-          ></textarea>
-
+          <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
           <button type="submit">Send Message</button>
+          <p id="form-status" class="form-status" role="status"></p>
+          <p class="form-alt">Or email me directly: <a href="mailto:spandanashetty2001@gmail.com">spandanashetty2001@gmail.com</a></p>
         </form>
       </div>
     </section>
 
-    <!-- ================= FOOTER ================= -->
-
     <footer>
       <p>
-        © 2026 Spandana Shetty | +91-7349200301 | Spandanashetty2001@gmail.com
+        © 2026 Spandana Shetty | +91-7349200301 | Spandanashetty2001@gmail.com |
+        Bengaluru, Karnataka
       </p>
     </footer>
 
-    <!-- JS -->
     <script src="script.js"></script>
   </body>
 </html>
