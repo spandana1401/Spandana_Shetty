@@ -1,259 +1,576 @@
-// ========================= script.js =========================
+document.addEventListener("DOMContentLoaded", () => {
+  // ==========================================
+  // 1. TYPING ANIMATION
+  // ==========================================
 
-// Typing Animation
+  const typingElement = document.querySelector(".typing-text");
+  const typingText = "DevOps Engineer | AWS | Kubernetes | AI Automation";
 
-const text = "DevOps Engineer | AWS | Kubernetes | AI Automation";
+  let typeIndex = 0;
 
-let index = 0;
+  if (typingElement) {
+    function typeEffect() {
+      typingElement.textContent = typingText.slice(0, typeIndex);
 
-function typeEffect() {
-  document.querySelector(".typing-text").innerHTML = text.slice(0, index);
+      typeIndex++;
 
-  index++;
+      if (typeIndex <= typingText.length) {
+        setTimeout(typeEffect, 75);
+      }
+    }
 
-  if (index <= text.length) {
-    setTimeout(typeEffect, 100);
+    typeEffect();
   }
-}
 
-typeEffect();
+  // ==========================================
+  // 2. SKILLS DATA
+  // ==========================================
 
-// ================= SKILL DATA =================
+  const skillData = {
+    aws: {
+      title: "AWS Cloud",
+      points: [
+        "Managed AWS services including EC2, S3, ECR, RDS, IAM, VPC, Lambda, CloudWatch and CloudFormation.",
 
-const skillData = {
-  aws: {
-    title: "AWS Cloud",
+        "Worked with CodeCommit, CodeBuild, CodePipeline, Systems Manager Session Manager and AWS License Manager.",
 
-    points: [
-      "Managed EC2, S3, IAM, Lambda, CloudFormation & CloudWatch",
+        "Created IAM roles and permission policies using CloudFormation, with templates maintained in CodeCommit.",
+      ],
+    },
 
-      "Worked with Kubernetes deployments in AWS EKS",
+    docker: {
+      title: "Containers & Orchestration",
+      points: [
+        "Containerized applications using Docker and supported Kubernetes deployments on Amazon EKS.",
 
-      "Built Jenkins & GitLab CI/CD pipelines",
+        "Automated base image build, version selection, tagging and publishing workflows using Docker and Amazon ECR.",
 
-      "Automated infrastructure using Terraform & CloudFormation",
+        "Worked with image and artifact management using Amazon ECR, Amazon S3 and Nexus Repository Manager.",
+      ],
+    },
 
-      "Integrated Amazon Bedrock & Amazon Q",
+    kubernetes: {
+      title: "CI/CD & Build Automation",
+      points: [
+        "Designed and maintained 5–10 Jenkins CI/CD pipelines using Groovy, Git and YAML.",
 
-      "Worked with CodeBuild, CodeDeploy & CodePipeline",
+        "Automated builds, artifact management and deployment workflows for banking applications.",
 
-      "Managed deployment repositories in CodeCommit",
-    ],
-  },
+        "Worked with AWS CodePipeline, CodeBuild, CodeCommit, Git and Maven.",
 
-  docker: {
-    title: "Containerization",
+        "Built pipelines to package, version and publish artifacts to Nexus Repository Manager.",
+      ],
+    },
 
-    points: [
-      "Built and managed Docker container images for application deployment and automation workflows.",
+    jenkins: {
+      title: "Monitoring, Logging & Enterprise Tools",
+      points: [
+        "Supported monitoring and troubleshooting using AWS CloudWatch and Splunk.",
 
-      "Deployed and managed containerized applications using Kubernetes on Amazon EKS.",
+        "Worked with Splunk Universal Forwarder, Tanium Client, Grafana and Prometheus.",
 
-      "Stored and maintained Docker images in Amazon ECR for centralized container management.",
+        "Automated enterprise application deployment using Jenkins and Nexus.",
 
-      "Worked on container orchestration, scaling, and deployment automation within Kubernetes environments.",
+        "Worked with Microsoft Active Directory domain joining and secure access management.",
+      ],
+    },
 
-      "Supported container-based CI/CD deployment workflows for enterprise applications.",
-    ],
-  },
+    linux: {
+      title: "Operating Systems & Administration",
+      points: [
+        "Worked with Linux (Ubuntu) and Windows Server environments.",
 
-  kubernetes: {
-    title: "CI/CD : Jenkins, GitLab, GitHub",
+        "Developed Bash/Shell scripts for infrastructure and operational automation.",
 
-    points: [
-      "Built and maintained CI/CD pipelines using Jenkins, GitLab CI/CD, and AWS DevOps services.",
+        "Supported server configuration, troubleshooting and deployment workflows.",
+      ],
+    },
 
-      "Managed source code repositories and version control using AWS CodeCommit and GitLab.",
+    ai: {
+      title: "Programming & Intelligent Automation",
+      points: [
+        "Developed automation scripts using Python, Bash/Shell and Groovy.",
 
-      "Automated application build and deployment processes using AWS CodeBuild.",
+        "Integrated Amazon Q with Amazon Bedrock Agents and Blue Prism for application error analysis and resolution recommendations.",
 
-      "Implemented deployment workflows using AWS CodeDeploy and AWS CodePipeline.",
+        "Developed Python Flask REST APIs with IAM-based access and workflow orchestration.",
+      ],
+    },
+  };
 
-      "Integrated CI/CD pipelines with Docker, Kubernetes, and Amazon EKS deployment environments.",
+  // ==========================================
+  // 3. EXPERIENCE DATA
+  // ==========================================
 
-      "Automated infrastructure provisioning and deployment activities through pipeline-based workflows.",
-    ],
-  },
+  const experienceData = {
+    accenture: {
+      title: "DevOps Engineer — Aug 2025 to Present",
 
-  jenkins: {
-    title: "Monitoring(Kibana, Grafana, CloudWatch) & Tool(Jira, Confluence)",
+      points: [
+        "Designed and maintained 5–10 Jenkins CI/CD pipelines using Groovy, Git and YAML for banking application builds, artifact management and deployments.",
 
-    points: [
-      "Configured and monitored application and infrastructure logs using AWS CloudWatch, Kibana, and Grafana.",
+        "Automated provisioning and configuration of 10–30 AWS EC2 instances through parameterized Jenkins jobs.",
 
-      "Implemented monitoring dashboards, alerting, and performance tracking for cloud environments and applications.",
+        "Integrated EC2, Amazon RDS, Microsoft Active Directory and Nexus for provisioning, database connectivity, domain joining and application installation.",
 
-      "Analyzed system logs and metrics to support troubleshooting and operational monitoring activities.",
+        "Automated deployments of Splunk Universal Forwarder, Tanium Client, Microsoft Edge, Firefox, Blue Prism and UiPath.",
 
-      "Used Jira for task tracking, sprint management, and project collaboration activities.",
+        "Automated container base image upgrades using Docker and Amazon ECR, reducing manual upgrade effort by an estimated 50–70%.",
 
-      "Utilized Confluence for documentation, knowledge sharing, and operational process management.",
-    ],
-  },
+        "Automated Terraform and Ansible provisioning, reducing environment setup from over 3 hours to under 15 minutes.",
 
-  linux: {
-    title: "Operating System",
+        "Contributed to an estimated 30–40% reduction in deployment time through automation.",
+      ],
+    },
 
-    points: [
-      "Performed Linux server administration",
+    bedrock: {
+      title: "Packaged App Development Associate — Feb 2024 to Aug 2025",
 
-      "Worked on shell scripting and automation",
+      points: [
+        "Integrated Amazon Q with Amazon Bedrock Agents and Blue Prism for application error analysis and resolution recommendations.",
 
-      "Managed deployments, upgrades in Linux environments",
+        "Developed Python Flask REST APIs connecting Blue Prism bots with Amazon Bedrock services, using secure IAM-based access.",
 
-      "Handled troubleshooting and operational support",
+        "Developed Jenkins CI/CD pipelines integrated with Git and Maven for 5+ banking applications.",
 
-      "Worked with Ubuntu cloud systems",
-    ],
-  },
+        "Provisioned AWS infrastructure using EC2, S3, IAM and VPC.",
 
-  ai: {
-    title: "AI Automation Experience",
+        "Automated infrastructure provisioning with Terraform and Ansible across development, staging and production.",
 
-    points: [
-      "Developed and maintained automation scripts using Bash and Python for deployment, provisioning, and operational tasks.",
+        "Containerized applications using Docker and supported Kubernetes deployment workflows.",
+      ],
+    },
+  };
 
-      "Worked with YAML and Groovy for CI/CD pipeline configuration and automation workflows.",
+  // ==========================================
+  // 4. PROJECT DETAILS
+  // ==========================================
 
-      "Created and managed SQL queries for data validation, reporting, and database operations.",
+  const projectData = {
+    "ci-cd": {
+      kicker: "CI/CD · Banking Applications",
 
-      "Supported automation and infrastructure management through scripting and configuration-based development.",
-    ],
-  },
-};
+      title: "Jenkins CI/CD & Artifact Automation",
 
-// ================= EXPERIENCE DATA =================
+      summary:
+        "Built Jenkins automation to streamline application build, release, artifact packaging and deployment workflows for banking applications.",
 
-const experienceData = {
-  accenture: {
-    title: "DevOps engineer (Packaged App Devlopment Analyst)",
+      work: [
+        "Designed and maintained 5–10 Jenkins pipelines using Groovy, Git and YAML.",
 
-    points: [
-      "Cloud Infrastructure Management: Managed AWS cloud environments using EC2, S3, IAM, Lambda, CloudWatch, EKS, and SQS.",
+        "Integrated Git and Maven into build and release workflows supporting 5+ banking applications.",
 
-      "CI/CD Pipeline Automation: Designed and maintained Jenkins CI/CD pipelines using Groovy, YAML, Python, and GitLab.",
+        "Built pipelines to package, version and publish artifacts to Nexus Repository Manager.",
 
-      "Infrastructure as Code (IaC): Automated infrastructure provisioning using Terraform and AWS CloudFormation.",
+        "Streamlined repository authentication and artifact management.",
+      ],
 
-      "Containerization & Kubernetes: Deployed and managed Docker and Kubernetes workloads within AWS EKS.",
+      tools: [
+        "Jenkins",
+        "Groovy",
+        "Git",
+        "Maven",
+        "YAML",
+        "Nexus Repository Manager",
+      ],
 
-      "Monitoring & Logging: Implemented monitoring and logging using CloudWatch, Grafana, and Kibana.",
+      impact:
+        "Outcome: Improved consistency across build and release workflows and reduced manual intervention in artifact management.",
+    },
 
-      "AWS DevOps Services: Worked with CodeCommit, CodeBuild, CodeDeploy, and CodePipeline for deployment automation.",
+    ec2: {
+      kicker: "AWS · Infrastructure Automation",
 
-      "Automation & Provisioning: Automated EC2 provisioning and environment setup through Jenkins and GitLab repositories.",
+      title: "Automated EC2 Provisioning & Server Configuration",
 
-      "Linux Administration: Performed Linux/Ubuntu administration, shell scripting, troubleshooting, and operational support.",
-    ],
-  },
+      summary:
+        "Developed Jenkins automation to provision and configure AWS servers for enterprise banking workloads.",
 
-  bedrock: {
-    title: "Packaged App Development Associate      2024-Aug 2025",
+      work: [
+        "Automated provisioning and configuration of 10–30 EC2 instances through parameterized Jenkins jobs.",
 
-    points: [
-      "Completed AWS & DevOps training focused on cloud infrastructure, CI/CD, Kubernetes, and automation.",
+        "Handled AMI selection, storage, security groups and post-provisioning setup.",
 
-      "Developed GitLab automation scripts to provision EC2 instances and automate Blue Prism environment setup.",
+        "Integrated EC2, Amazon RDS, Microsoft Active Directory domain joining and Nexus Repository Manager.",
 
-      "Integrated Jenkins jobs with GitLab repositories to enable automated infrastructure provisioning on user requests.",
+        "Automated enterprise application installation as part of server setup.",
+      ],
 
-      "Created and configured UiPath automation jobs and deployed execution workflows using AWS EKS clusters.",
+      tools: [
+        "AWS EC2",
+        "Amazon RDS",
+        "Jenkins",
+        "Microsoft Active Directory",
+        "Nexus",
+      ],
 
-      "Built Kubernetes-based automation workflows enabling UiPath job execution without manual intervention.",
-    ],
-  },
-};
+      impact:
+        "Outcome: Standardized repeatable server provisioning and reduced manual setup activities.",
+    },
 
-// ================= SKILL POPUP =================
+    images: {
+      kicker: "Containers · Image Lifecycle",
 
-const cards = document.querySelectorAll(".card");
+      title: "Container Base Image Upgrade Automation",
 
-const popup = document.getElementById("popup");
+      summary:
+        "Automated base image upgrade workflows for Alpine Linux, Splunk, Tanium and database cronjob components.",
 
-const popupTitle = document.getElementById("popup-title");
+      work: [
+        "Implemented version selection for base image upgrade workflows.",
 
-const popupContent = document.getElementById("popup-content");
+        "Automated Docker image building, tagging and publishing to Amazon ECR.",
 
-const overlay = document.querySelector(".overlay");
+        "Retrieved application packages and version tags from Amazon S3 using Jenkins.",
 
-const closeBtn = document.querySelector(".close-btn");
+        "Automated S3 cleanup after image publishing.",
+      ],
 
-// Open Skill Popup
+      tools: ["Docker", "Amazon ECR", "Amazon S3", "Jenkins", "Alpine Linux"],
 
-cards.forEach((card) => {
-  if (card.classList.contains("experience-card")) return;
+      impact:
+        "Resume-reported outcome: Reduced manual base image upgrade effort by an estimated 50–70%.",
+    },
 
-  card.addEventListener("click", () => {
-    const skill = card.getAttribute("data-skill");
+    iac: {
+      kicker: "Infrastructure as Code",
 
-    popupTitle.innerHTML = skillData[skill].title;
+      title: "Cloud Infrastructure Provisioning with IaC",
 
-    popupContent.innerHTML = "";
+      summary:
+        "Automated AWS infrastructure provisioning and configuration management across development, staging and production.",
 
-    skillData[skill].points.forEach((point) => {
-      popupContent.innerHTML += `<li>${point}</li>`;
+      work: [
+        "Used Terraform and Ansible for infrastructure provisioning and configuration.",
+
+        "Created custom AWS IAM roles and permission policies using CloudFormation.",
+
+        "Maintained infrastructure templates in AWS CodeCommit.",
+
+        "Supported EC2, S3, IAM, VPC, RDS, Lambda, ECR and CloudWatch.",
+      ],
+
+      tools: [
+        "Terraform",
+        "Ansible",
+        "AWS CloudFormation",
+        "AWS IAM",
+        "CodeCommit",
+      ],
+
+      impact:
+        "Resume-reported outcome: Reduced environment setup from over 3 hours to under 15 minutes (over 90% reduction).",
+    },
+
+    bedrock: {
+      kicker: "AI · Intelligent Automation",
+
+      title: "AI-assisted Application Error Analysis",
+
+      summary:
+        "Integrated Amazon Q, Amazon Bedrock Agents and Blue Prism to support application error analysis and resolution recommendations.",
+
+      work: [
+        "Connected Blue Prism bots with Amazon Bedrock services.",
+
+        "Developed Python Flask REST APIs for communication between bots and Bedrock.",
+
+        "Implemented IAM-based access controls and workflow orchestration.",
+
+        "Supported application error analysis and resolution recommendations.",
+      ],
+
+      tools: [
+        "Amazon Q",
+        "Amazon Bedrock Agents",
+        "Blue Prism",
+        "Python",
+        "Flask REST API",
+        "AWS IAM",
+      ],
+
+      impact:
+        "Outcome: Connected RPA workflows with generative AI services to support application troubleshooting.",
+    },
+
+    "enterprise-apps": {
+      kicker: "Enterprise Automation",
+
+      title: "Enterprise Application Installation Automation",
+
+      summary:
+        "Automated deployment of endpoint and enterprise applications through Jenkins and Nexus-based workflows.",
+
+      work: [
+        "Automated deployment of Splunk Universal Forwarder and Tanium Client.",
+
+        "Automated installation of Microsoft Edge, Firefox, Blue Prism and UiPath.",
+
+        "Integrated Jenkins automation with Nexus for package retrieval and installation.",
+
+        "Supported standardized Windows AMIs with Microsoft Office Professional.",
+      ],
+
+      tools: [
+        "Jenkins",
+        "Nexus",
+        "Splunk",
+        "Tanium",
+        "Blue Prism",
+        "UiPath",
+        "Windows Server",
+      ],
+
+      impact:
+        "Outcome: Standardized enterprise application setup and reduced repetitive manual installation work.",
+    },
+  };
+
+  // ==========================================
+  // 5. POPUP MANAGEMENT
+  // ==========================================
+
+  const overlay = document.querySelector(".overlay");
+
+  const popupIds = ["popup", "experience-popup", "project-popup"];
+
+  function closeAllPopups() {
+    popupIds.forEach((id) => {
+      document.getElementById(id)?.classList.remove("active");
     });
+
+    overlay?.classList.remove("active");
+  }
+
+  // ==========================================
+  // 6. SKILLS & EXPERIENCE POPUPS
+  // ==========================================
+
+  function openListPopup(popupId, titleId, listId, data) {
+    if (!data) return;
+
+    const popup = document.getElementById(popupId);
+    const title = document.getElementById(titleId);
+    const list = document.getElementById(listId);
+
+    if (!popup || !title || !list) return;
+
+    title.textContent = data.title;
+
+    list.replaceChildren();
+
+    data.points.forEach((point) => {
+      const li = document.createElement("li");
+
+      li.textContent = point;
+
+      list.appendChild(li);
+    });
+
+    closeAllPopups();
 
     popup.classList.add("active");
 
-    overlay.classList.add("active");
+    overlay?.classList.add("active");
+  }
+
+  // Skills popup
+
+  document.querySelectorAll(".card[data-skill]").forEach((card) => {
+    card.addEventListener("click", () => {
+      openListPopup(
+        "popup",
+        "popup-title",
+        "popup-content",
+        skillData[card.dataset.skill],
+      );
+    });
   });
-});
 
-// Close Skill Popup
+  // Experience popup
 
-closeBtn.addEventListener("click", () => {
-  popup.classList.remove("active");
+  document.querySelectorAll(".experience-card[data-exp]").forEach((card) => {
+    card.addEventListener("click", () => {
+      openListPopup(
+        "experience-popup",
+        "exp-title",
+        "exp-content",
+        experienceData[card.dataset.exp],
+      );
+    });
+  });
 
-  overlay.classList.remove("active");
-});
+  // ==========================================
+  // 7. PROJECT POPUPS
+  // ==========================================
 
-// ================= EXPERIENCE POPUP =================
+  function openProject(key) {
+    const data = projectData[key];
 
-const expCards = document.querySelectorAll(".experience-card");
+    if (!data) return;
 
-const expPopup = document.getElementById("experience-popup");
+    const popup = document.getElementById("project-popup");
 
-const expTitle = document.getElementById("exp-title");
+    if (!popup) return;
 
-const expContent = document.getElementById("exp-content");
+    document.getElementById("project-popup-kicker").textContent = data.kicker;
 
-const expCloseBtn = document.querySelector(".exp-close-btn");
+    document.getElementById("project-popup-title").textContent = data.title;
 
-// Open Experience Popup
+    document.getElementById("project-popup-summary").textContent = data.summary;
 
-expCards.forEach((card) => {
-  card.addEventListener("click", () => {
-    const exp = card.getAttribute("data-exp");
+    // Project responsibilities
 
-    expTitle.innerHTML = experienceData[exp].title;
+    const workList = document.getElementById("project-popup-work");
 
-    expContent.innerHTML = "";
+    workList.replaceChildren();
 
-    experienceData[exp].points.forEach((point) => {
-      expContent.innerHTML += `<li>${point}</li>`;
+    data.work.forEach((item) => {
+      const li = document.createElement("li");
+
+      li.textContent = item;
+
+      workList.appendChild(li);
     });
 
-    expPopup.classList.add("active");
+    // Technologies
 
-    overlay.classList.add("active");
+    const toolsContainer = document.getElementById("project-popup-tools");
+
+    toolsContainer.replaceChildren();
+
+    data.tools.forEach((tool) => {
+      const span = document.createElement("span");
+
+      span.textContent = tool;
+
+      toolsContainer.appendChild(span);
+    });
+
+    // Project impact
+
+    document.getElementById("project-popup-impact").textContent = data.impact;
+
+    closeAllPopups();
+
+    popup.classList.add("active");
+
+    overlay?.classList.add("active");
+  }
+
+  // Project button clicks
+
+  document.querySelectorAll("[data-project-open]").forEach((button) => {
+    button.addEventListener("click", (event) => {
+      event.stopPropagation();
+
+      openProject(button.dataset.projectOpen);
+    });
   });
-});
 
-// Close Experience Popup
+  // Entire project card clickable
 
-expCloseBtn.addEventListener("click", () => {
-  expPopup.classList.remove("active");
+  document.querySelectorAll(".experience-project").forEach((card) => {
+    card.addEventListener("click", (event) => {
+      if (event.target.closest("button, a")) return;
 
-  overlay.classList.remove("active");
-});
+      openProject(card.dataset.project);
+    });
 
-// Overlay Close
+    // Keyboard accessibility
 
-overlay.addEventListener("click", () => {
-  popup.classList.remove("active");
+    card.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
 
-  expPopup.classList.remove("active");
+        openProject(card.dataset.project);
+      }
+    });
+  });
 
-  overlay.classList.remove("active");
+  // ==========================================
+  // 8. CLOSE POPUPS
+  // ==========================================
+
+  document
+    .querySelectorAll(".close-btn, .exp-close-btn, .project-close-btn")
+    .forEach((button) => {
+      button.addEventListener("click", closeAllPopups);
+    });
+
+  // Close on overlay click
+
+  overlay?.addEventListener("click", closeAllPopups);
+
+  // Close on Escape key
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeAllPopups();
+    }
+  });
+
+  // ==========================================
+  // 9. CONTACT FORM
+  // ==========================================
+
+  const contactForm = document.getElementById("contact-form");
+
+  const contactStatus = document.getElementById("contact-status");
+
+  const contactSubmit = document.getElementById("contact-submit");
+
+  contactForm?.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    if (!contactForm.reportValidity()) return;
+
+    contactSubmit.disabled = true;
+
+    contactSubmit.textContent = "Sending...";
+
+    contactStatus.textContent = "";
+
+    contactStatus.classList.remove("error");
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: "POST",
+
+        body: new FormData(contactForm),
+
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      const result = await response.json();
+
+      if (
+        !response.ok ||
+        result.success === false ||
+        result.success === "false"
+      ) {
+        throw new Error(result.message || "Message could not be sent.");
+      }
+
+      // Success message
+
+      contactStatus.textContent =
+        "Thanks! Your message has been sent successfully.";
+
+      contactForm.reset();
+    } catch (error) {
+      // Error message
+
+      contactStatus.textContent =
+        "We couldn't send your message. Please email Spandanashetty2001@gmail.com directly.";
+
+      contactStatus.classList.add("error");
+    } finally {
+      contactSubmit.disabled = false;
+
+      contactSubmit.textContent = "Send Message";
+    }
+  });
 });
